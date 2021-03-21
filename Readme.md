@@ -25,7 +25,10 @@ Installation
 *  Go inside php container `docker-compose exec nginx bash`
 *  Run 
    + `composer install`
+   + `./bin/console doctrine:migrations:migrate`
    + `yarn install`
    + `yarn build`
 * Open browser http://localhost:8013 (login: admin, pass: 111111)
-* Have a fun!
+   + History page `http://localhost:8013/history`
+   + Api documentation `http://localhost:8013/api/doc`
+* Have fun!
