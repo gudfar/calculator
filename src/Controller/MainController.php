@@ -18,13 +18,7 @@ class MainController extends AbstractController
      */
     public function indexAction()
     {
-        $response = $this->render('main/index.html.twig');
-
-        $response->setPublic();
-        $response->setMaxAge(3600);
-        $response->headers->addCacheControlDirective('must-revalidate', true);
-
-        return $response;
+        return $this->render('main/index.html.twig');
     }
 
 }
