@@ -13,7 +13,7 @@ const CalculatorPage = () => {
     const [result, setResult] = useState(data);
 
     useEffect(() => {
-        if (data && data !== result) {
+        if (data !== result) {
             setResult(data.toString());
         }
     }, [data]);
@@ -41,7 +41,10 @@ const CalculatorPage = () => {
 
     const validate = () => {
         try {
-            eval(result);
+            const evalResult = eval(result);
+            if (evalResult === Infinity) {
+                throw new Error('Zero division error');
+            }
             return true;
         } catch (e) {
             console.log(e);

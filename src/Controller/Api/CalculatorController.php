@@ -33,7 +33,7 @@ class CalculatorController extends AbstractFOSRestController
     {
         $em = $this->getDoctrine()->getManager();
         $expressionLanguage = new ExpressionLanguage();
-        $result = $expressionLanguage->evaluate($data);
+        $result = round($expressionLanguage->evaluate($data), 2);
 
         $history = new History();
         $history->setUser($this->getUser());
