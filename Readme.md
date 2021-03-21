@@ -32,3 +32,8 @@ Installation
    + History page `http://localhost:8013/history`
    + Api documentation `http://localhost:8013/api/doc`
 * Have fun!
+
+
+Database connection issues 🔬⚠️
+-------------------------------
+if you encounter an error check if the mysql container is alive.
